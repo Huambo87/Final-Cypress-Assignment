@@ -2,7 +2,7 @@
 
 import selectors from '../support/final_selectors.js'
 
-describe('Home Page Test', () => {
+describe('Main Menu Test', () => {
 
   Cypress.on('uncaught:exception', (err, runnable) => {
     //Returning false here prevents Cypress
@@ -12,7 +12,6 @@ describe('Home Page Test', () => {
 
   beforeEach(() => {
     cy.visit('/')
-    // cy.get('body').should('be.visible')
   })
 
   it('home_tab_test', () => {
