@@ -1,0 +1,56 @@
+{
+    "data": [
+        {
+            "province": "Alberta",
+            "city": "Calgary"
+        },
+        {
+            "province": "British Columbia",
+            "city": "Vancouver"
+        },
+        {
+            "province": "Manitoba",
+            "city": "Winnepeg"
+        },
+        {
+            "province": "NewBrunswick",
+            "city": "Fredrickton"
+        },
+        {
+            "province": "Newfoundland",
+            "city": "St. John's"
+        },
+        {
+            "province": "NorthwestTerritory",
+            "city": "Fort Smith"
+        },
+        {
+            "province": "NovaScotia",
+            "city": "Halifax"
+        },
+        {
+            "province": "Nunavut",
+            "city": "Iqaluit"
+        },
+        {
+            "province": "Ontario",
+            "city": "Toronto"
+        },
+        {
+            "province": "Prince Edward Island",
+            "city": "Charlottetown"
+        },
+        {
+            "province": "Quebec",
+            "city": "Montreal"
+        },
+        {
+            "province": "Saskatechewan",
+            "city": "Saskatoon"
+        },
+        {
+            "province": "Yukon",
+            "city": "Whitehorse"
+        }       
+    ]
+}
