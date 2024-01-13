@@ -23,22 +23,22 @@ describe('Main Menu Test', () => {
                 cy.get(province)
                     .select(element.province)
                     .invoke('val')
-                    .should('eq', element.province);
+                    .should('eq', element.province)
     
                 // Log success or any additional actions after the successful selection
-                cy.log(`Selected province: ${element.province}`);
+                cy.log(`Selected province: ${element.province}`)
     
                 // Continue with other actions or assertions within the try block if needed
-                cy.get('[name="stage2"] option').should('have.length.gt', 1);
+                cy.get('[name="stage2"] option').should('have.length.gt', 1)
             } catch (error) {
                 // Log the error
-                cy.log(`Failed to select province: ${element.province}`);
-                cy.log(error);
+                cy.log(`Failed to select province: ${element.province}`)
+                cy.log(error)
     
                 // Prevent Cypress from failing the entire test
                 Cypress.on('uncaught:exception', (err, runnable) => {
                     return false;
-                });
+                })
             }
         })
     })
