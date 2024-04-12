@@ -6,7 +6,7 @@ import selectors from '../support/final_selectors.js'
 
 
 
-describe('Main Menu Test', () => {
+describe('Heating Costs Test', () => {
 
     Cypress.on('uncaught:exception', (err, runnable) => {
         return false
