@@ -52,5 +52,50 @@
             "province": "Yukon",
             "city": "Whitehorse"
         }       
+    ],
+
+    "oldheatsystem": [
+        {
+            "heatsys": "aNaturalGas"
+        },
+        {
+            "heatsys": "Propane"
+        },
+        {
+            "heatsys": "Oil"
+        },
+        {
+            "heatsys": "Electric"
+        },
+        {
+            "heatsys": "HeatPump"
+        }
+    ],
+
+    "newheatsystem": [
+        {
+            "nheatsys": "bNaturalGas"
+        },
+        {
+            "nheatsys": "Propane"
+        },
+        {
+            "nheatsys": "Oil"
+        },
+        {
+            "nheatsys": "Electric"
+        },
+        {
+            "nheatsys": "HeatPump"
+        },
+        {
+            "nheatsys": "DualFuelNaturalGas"
+        },
+        {
+            "nheatsys": "DualFuelOil"
+        },
+        {
+            "nheatsys": "DualFuelPropane"
+        }
     ]
 }

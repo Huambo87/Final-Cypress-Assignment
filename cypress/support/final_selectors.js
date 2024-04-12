@@ -8,5 +8,12 @@ export default{
     careers_tab : '[id="menu-item-1589"]',
     blog_tab : '[id="menu-item-1725"]',
     faq_tab : '[id="menu-item-1727"]',
-    conatacts_tab : '[id="menu-item-1726"]' 
+    conatacts_tab : '[id="menu-item-1726"]',
+    old_heat_sys : '[id="heattype"]',
+    old_heat_cost : '#CHC',
+    new_heat_sys : '[name="heatingtype"]',
+    new_heat_cost : '[id="NHC"]',
+    annual_heat_savings : '#AHS',
+    total_annual_savings : '#VTAS',
+    total_extended_savings : '#VTES'    
 }

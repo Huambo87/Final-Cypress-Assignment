@@ -1,17 +1,14 @@
-//<reference types = 'Cypress'/>
+///<reference types = 'Cypress'/>
+
+import { oldheatsystem } from '../fixtures/final_params.json'
+import { newheatsystem } from '../fixtures/final_params.json'
+import selectors from '../support/final_selectors.js'
+
+
 
 describe('Main Menu Test', () => {
 
-    // const province = '[name="nastates"]'
-    // const city = '[name="stage2"]'
-    // const stories = ':nth-child(6) > :nth-child(2) > .Slcst'
-    // const square_feet = ':nth-child(6) > :nth-child(3) > .Slcst'
-    // const home_age = '.Txtss'
-
-
     Cypress.on('uncaught:exception', (err, runnable) => {
-        //Returning false here prevents Cypress
-        //from failing the test
         return false
     })
 
@@ -19,16 +16,26 @@ describe('Main Menu Test', () => {
         cy.visit('/savings-calculator/')
     })
 
-    // it('calc_ontario_test', () => {
-    //     cy.get(province).select('Ontario').invoke('val').should('eq', 'Ontario')
-    //     cy.get(city).select('Toronto').should('contain.text', 'Toronto')
-    //     cy.get(stories).select('1 + Basement').should('contain.text', '1 + Basement')
-    //     cy.get(square_feet).select('1750').invoke('val').should('eq', '1750')
-    //     cy.get(home_age).type('45').invoke('val').should('eq', '45')
-    // })
-
-    it('calc_heat_cost_test', () => {
+    it('calc_old_heat_cost_test', () => {
         cy.stepOne('Ontario', 'Toronto', '1 + Basement', '1750', '45')
+        oldheatsystem.forEach(element => {
+
+            cy.get(selectors.old_heat_sys).select(element.heatsys)
+            cy.pause()
+            cy.get(selectors.old_heat_cost).should('not.have.text', '$0.00')
+        })  
     })
 
+    it('calc_new_heat_cost_and_savings_test', () => {
+        cy.stepOne('Ontario', 'Toronto', '1 + Basement', '1750', '45')
+        newheatsystem.forEach(element => {
+
+            cy.get(selectors.new_heat_sys).select(element.nheatsys)
+            cy.pause()
+            cy.get(selectors.new_heat_cost).should('not.have.text', '$0.00')
+            cy.get(selectors.annual_heat_savings).should('not.have.text', '$0.00')
+            cy.get(selectors.total_annual_savings).should('not.have.text', '$0.00')
+            cy.get(selectors.total_extended_savings).should('not.have.text', '$0.00')
+        })  
+    })
 })

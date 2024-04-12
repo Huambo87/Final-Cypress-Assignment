@@ -1,13 +1,10 @@
 ///<reference types = 'Cypress'/>
 
-describe('Main Menu Test', () => {
+describe('Location Test', () => {
 
     const province = '[name="nastates"]'
-    // const city = '[name="stage2"]'
-
+   
     Cypress.on('uncaught:exception', (err, runnable) => {
-        //Returning false here prevents Cypress
-        //from failing the test
         return false
     })
 

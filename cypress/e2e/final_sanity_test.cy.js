@@ -5,8 +5,6 @@ import selectors from '../support/final_selectors.js'
 describe('Main Menu Test', () => {
 
   Cypress.on('uncaught:exception', (err, runnable) => {
-    //Returning false here prevents Cypress
-    //from failing the test
     return false
   })
 
@@ -18,7 +16,7 @@ describe('Main Menu Test', () => {
     cy.get(selectors.home_tab)
     cy.get('h1').should('not.be.empty')
   })
-  
+
   it('about_tab_test', () => {
     cy.get(selectors.about_tab).click()
     cy.get('h1').should('not.be.empty').contains('About Consumers Energy Management Inc.')
